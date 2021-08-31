@@ -5,6 +5,7 @@ RUN apt-get update \
  && apt-get -y clean \
  && rm -rf /var/lib/apt/lists/*
 
-WORKDIR "/data"
+COPY "./run.sh" "/"
 
-ENTRYPOINT ["gif2png"]
+ENTRYPOINT ["bash", "./run.sh"]
+
