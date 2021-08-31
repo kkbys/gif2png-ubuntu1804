@@ -12,6 +12,15 @@ docker build . -t gif2png
 docker run --rm -v $(pwd):/data gif2png GIF_FILE
 ```
 
-## Attention
+If you want to use more easily, set the alias as follows:
 
-Generated png file's owner and group are `root`.
+```sh
+alias gif2png="docker run --rm -v \$(pwd):/data gif2png"
+```
+
+Now, you can use easily use it like this:
+
+```sh
+gif2png GIF_FILE
+```
+
